@@ -1,25 +1,13 @@
 spring:
   profiles:
     active: @profileActive@
-    application:
-      name: lwf
-  servlet:
-    multipart:
-      max-file-size: 5MB
-      max-request-size: 10MB
-      enabled: true
-thymeleaf:
-    mode: HTML5
-    encoding: UTF-8
-    servlet:
-      content-type: text/xml
-    cache: false
+
   #mybatis
 mybatis:
   configuration:
     map-underscore-to-camel-case: true
 mybatis-plus:
-  mapper-locations: classpath*:/com/example/dao/mapper/**/**Mapper.xml
+  mapper-locations: classpath*:/com/example/dao/mapper/**Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
   typeAliasesPackage: com.example.dao.pojo.*
   global-config:

@@ -36,11 +36,16 @@
         <thymeleaf.version>3.0.11.RELEASE</thymeleaf.version>
         <swagger-annotations.version>1.5.15</swagger-annotations.version>
         <orika-core.version>1.4.6</orika-core.version>
+        <jackson-datatype-jsr310.version>2.9.8</jackson-datatype-jsr310.version>
     </properties>
 
     <dependencyManagement>
         <dependencies>
-            <!-- https://mvnrepository.com/artifact/io.swagger/swagger-annotations -->
+            <dependency>
+                <groupId>com.fasterxml.jackson.datatype</groupId>
+                <artifactId>jackson-datatype-jsr310</artifactId>
+                <version>${jackson-datatype-jsr310.version}</version>
+            </dependency>
 
             <!-- https://mvnrepository.com/artifact/mysql/mysql-connector-java -->
             <dependency>
@@ -131,6 +136,7 @@
                 <artifactId>swagger-bootstrap-ui</artifactId>
                 <version>${swagger.bootstrap.ui.version}</version>
             </dependency>
+
 
 
         </dependencies>
