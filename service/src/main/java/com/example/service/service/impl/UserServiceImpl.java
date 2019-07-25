@@ -1,10 +1,8 @@
-package service.impl;
+package com.example.service.service.impl;
 
 
-import org.springframework.beans.factory.annotation.Autowired;
+import com.example.service.service.UserService;
 import org.springframework.stereotype.Service;
-import service.UserService;
-
 
 /**
  * @Author lwf

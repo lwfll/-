@@ -1,4 +1,4 @@
-package config;
+package com.example.controller.config;
 
 import com.alibaba.druid.pool.DruidDataSource;
 import com.alibaba.druid.support.http.StatViewServlet;
@@ -56,8 +56,6 @@ public class DruidConfiguration {
     private boolean poolPreparedStatements;
     @Value("${spring.datasource.druid.max-pool-prepared-statement-per-connection-size}")
     private int maxPoolPreparedStatementPerConnectionSize;
-    @Value("${spring.datasource.druid.filters}")
-    private String filters;
     @Value("{spring.datasource.druid.connectionProperties}")
     private String connectionProperties;
 
@@ -84,11 +82,6 @@ public class DruidConfiguration {
         datasource.setTestOnReturn(testOnReturn);
         datasource.setPoolPreparedStatements(poolPreparedStatements);
         datasource.setMaxPoolPreparedStatementPerConnectionSize(maxPoolPreparedStatementPerConnectionSize);
-        try {
-            datasource.setFilters(filters);
-        } catch (SQLException e) {
-            System.err.println("druid configuration initialization filter: "+ e);
-        }
         datasource.setConnectionProperties(connectionProperties);
         return datasource;
     }
