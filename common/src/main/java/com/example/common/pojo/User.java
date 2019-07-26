@@ -1,9 +1,8 @@
-package com.example.dao.pojo;
+package com.example.common.pojo;
 
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import springfox.documentation.annotations.ApiIgnore;
 
 /**
  * @Author lwf

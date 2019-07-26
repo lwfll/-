@@ -1,6 +1,14 @@
 spring:
   profiles:
     active: @profileActive@
+  mvc:
+    view:
+      suffix: .jsp
+      prefix: /
+  security:
+    user:
+      name: user
+      password: 123456
 
   #mybatis
 mybatis:
@@ -9,7 +17,7 @@ mybatis:
 mybatis-plus:
   mapper-locations: classpath*:/com/example/dao/mapper/**Mapper.xml
   #实体扫描，多个package用逗号或者分号分隔
-  typeAliasesPackage: com.example.dao.pojo.*
+  typeAliasesPackage: com.example.common.pojo.*
   global-config:
     db-config:
       id-type: AUTO
